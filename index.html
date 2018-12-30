@@ -216,159 +216,179 @@
 
 
 
-        // ----------------------- legacy stuff ------------------
+// ----------------------- legacy stuff ------------------
 
         // move to the specified location
-        function scrollTo(hash) {
-            location.hash = "#" + hash;
+        function scrollTo(hash) 
+	{
+        	location.hash = "#" + hash;
         }
 
         // get the value of a radio button
-        function getRadioButton(name) {
-            var i, radios = document.getElementsByName(name);
-            for (i = 0; i < radios.length; i = i + 1) {
-                if (radios[i].checked) {
-                    return (radios[i].value);
-                }
-            }
-            return("NA")
+        function getRadioButton(name) 
+	{
+            	var i, radios = document.getElementsByName(name);
+            	for (i = 0; i < radios.length; i = i + 1) 
+		{
+                	if (radios[i].checked) 
+			{
+                    		return (radios[i].value);
+                	}
+            	}
+            	return("NA")
         }
 
         // function to change the display property of a set of objects
-        function setDisplay(theClass, theValue) {
-            var i, classElements = document.getElementsByClassName(theClass);
-            for (i = 0; i < classElements.length; i = i + 1) {
-                classElements[i].style.display = theValue;
-            }
+        function setDisplay(theClass, theValue) 
+	{
+        	var i, classElements = document.getElementsByClassName(theClass);
+        	for (i = 0; i < classElements.length; i = i + 1) 
+		{
+	        	classElements[i].style.display = theValue;
+            	}
         }
 
         // function to change the visibility property of a set of objects
-        function setVisibility(theClass, theValue) {
-            var i, classElements = document.getElementsByClassName(theClass);
-            for (i = 0; i < classElements.length; i = i + 1) {
-                classElements[i].style.visibility = theValue;
-            }
+        function setVisibility(theClass, theValue) 
+	{
+        	var i, classElements = document.getElementsByClassName(theClass);
+        	for (i = 0; i < classElements.length; i = i + 1) 
+		{
+                	classElements[i].style.visibility = theValue;
+            	}
         }
 
         // set the focus
-        function setFocus(theElement) {
-            document.getElementById(theElement).focus();
+        function setFocus(theElement) 
+	{
+        	document.getElementById(theElement).focus();
         }
 
         // alter the header
-        function setHeader(theValue) {
-            document.getElementById("header").innerText = theValue;
+        function setHeader(theValue) 
+	{
+        	document.getElementById("header").innerText = theValue;
         }
 
         // alter the border (on one of the instruction boxes)
-        function setBoxBorder(whichBox, theValue) {
-            document.getElementById('instruction' + whichBox + 'inner').style.border = theValue;
+        function setBoxBorder(whichBox, theValue) 
+	{
+        	document.getElementById('instruction' + whichBox + 'inner').style.border = theValue;
         }
 
         // clear all the check marks for the radio buttons
-        function clearCheckRadio() {
-            var i, radios = document.getElementsByClassName('checkRadio');
-            for (i = 0; i < radios.length; i = i + 1) {
-                radios[i].checked = false;
-            }
+        function clearCheckRadio() 
+	{
+        	var i, radios = document.getElementsByClassName('checkRadio');
+        	for (i = 0; i < radios.length; i = i + 1) 
+		{
+                	radios[i].checked = false;
+            	}
         }
 
-        // ------------- handle the introductory stuff ----------------
+// ------------- handle the introductory stuff ----------------
 
-        function splashButtonClick() {
-            setDisplay('start', 'none');
-            setDisplay('consent', '');
-            setHeader(' ');
+        function splashButtonClick() 
+	{
+        	setDisplay('start', 'none');
+        	setDisplay('consent', '');
+        	setHeader(' ');
         }
 
-        function consentButtonClick() {
-            setDisplay('consent', 'none');
-            setDisplay('demographics', '');
-            setHeader(' ');
+        function consentButtonClick() 
+	{
+        	setDisplay('consent', 'none');
+        	setDisplay('demographics', '');
+        	setHeader(' ');
         }
 
-      /* save and finish */
-      function endExperiment(dataset,callback) {
-
-          // $.post('submit',{"content": dataset});
-          setTimeout(callback,1000)
-
-      }
-
-
-      /* start the experiment */
-      function startExperiment(){
-
-          //document.getElementById("splash").style.display = "none";
-          jsPsych.init({
-            timeline: timeline,
-            preload_images: images,
-            on_finish: function() {
-                endExperiment( jsPsych.data.dataAsCSV(), function() {
-                                        document.write('<div id="endscreen" class="endscreen" style="width:1000px"><div class="endscreen" style="text-align:center; border:0px solid; padding:10px; font-size:120%; width:800px; float:right"><p><br><br><br>All done!<br><br>Please contact us if something goes wrong and we\'ll fix it as quickly as possible.</p></div></div>')
-                    }
-                )
-            }
-          });
-      }
-
-        function demographicsButtonClick() {
-            setDisplay('demographics', 'none');
-            setDisplay('header','none')
-            //setHeader('');
-
-            // record the condition assignment in the jsPsych data
-            jsPsych.data.addProperties({
-                gender: getRadioButton("gender"),
-                age: document.getElementById("age").value,
-                language: document.getElementById("language").value,
-                country: document.getElementById("country").value,
-                experience: getRadioButton("experience").value,
-                handedness: getRadioButton("handedness").value,
-                mapholding: getRadioButton("mapholding").value,
-               	driveside: getRadioButton("driveside").value
-            });
+      	/* save and finish */
+      	function endExperiment(dataset,callback) 
+	{
+		// $.post('submit',{"content": dataset});
+        	setTimeout(callback,1000)
+	}
 
 
-            // record the condition assignment in the jsPsych data
-            jsPsych.data.addProperties({
-                sampling: condition,
-                baserate: baserate,
-             });
+     	/* start the experiment */
+	function startExperiment()
+	{
+        	//document.getElementById("splash").style.display = "none";
+        	jsPsych.init(
+		{
+            		timeline: timeline,
+            		preload_images: images,
+            		on_finish: function() 
+			{
+                		endExperiment( jsPsych.data.dataAsCSV(), function() 
+				{
+                                	document.write('<div id="endscreen" class="endscreen" style="width:1000px"><div class="endscreen" style="text-align:center; border:0px solid; padding:10px; font-size:120%; width:800px; float:right"><p><br><br><br>All done!<br><br>Please contact us if something goes wrong and we\'ll fix it as quickly as possible.</p></div></div>')
+                    		})
+            		}
+          	});
+     	}
 
-            startExperiment();
+        function demographicsButtonClick() 
+	{
+        	setDisplay('demographics', 'none');
+        	setDisplay('header','none')
+        	//setHeader('');
+
+        	// record the condition assignment in the jsPsych data
+        	jsPsych.data.addProperties(
+		{
+			gender: getRadioButton("gender"),
+                	age: document.getElementById("age").value,
+                	language: document.getElementById("language").value,
+                	country: document.getElementById("country").value,
+                	experience: getRadioButton("experience").value,
+                	handedness: getRadioButton("handedness").value,
+                	mapholding: getRadioButton("mapholding").value,
+               		driveside: getRadioButton("driveside").value
+        	});
+
+        	// record the condition assignment in the jsPsych data
+        	jsPsych.data.addProperties(
+		{
+			sampling: condition,
+                	baserate: baserate,
+             	});
+            	startExperiment();
         }
 
 
-      // -------------------- main expt ----------------
+// -------------------- main expt ----------------
 
 
-	  /* function that generates test string */
-	  function testString(ind) {
+	/* function that generates test string */
+	function testString(ind) 
+	{
 		  var str;
 		  str = "<img src='./img/test" + ind + ".jpg' width=800px><p width=800px><span id='qqqqq' style='display:none'>In your opinion, how likely is it that a Sodor sphere of this size has a plaxium coating?</span></p>"
 	  	return(str)
 	  }
 
 
-      /* define setup block */
-      var setup_block = {
-          type: 'button-response',
-          timing_post_trial: 0,
-	      button_html: '<button class="jspsych-btn" style="display:none">%choice%</button>',
-          choices: ['Click here to continue'],
-          on_trial_start: function() { setTimeout(function() {setDisplay("jspsych-btn","")}, 3000)},
-          is_html: true,
-          timeline: [
-              {stimulus: '<img src="./img/intro1.jpg" width=800px>'},
-		      {stimulus: '<img src="./img/robot2.jpg" width=800px>'},
-              {stimulus: '<img src="./img/robot3.jpg" width=800px>'},
-              {stimulus: '<img src="./img/robot6.jpg" width=800px>'},
-              {stimulus: '<img src="./img/robot7.jpg" width=800px>'},
-              {stimulus: '<img src="./img/robot8_' + condition + '.jpg" width=800px>'},
-              {stimulus: '<img src="./img/robot9_' + condition + '.jpg" width=800px>'},
-              {stimulus: '<img src="./img/robot10_' + condition + '.jpg" width=800px>'}
-          ]
+	/* define setup block */
+	var setup_block = 
+	{
+		type: 'button-response',
+          	timing_post_trial: 0,
+	      	button_html: '<button class="jspsych-btn" style="display:none">%choice%</button>',
+          	choices: ['Click here to continue'],
+          	on_trial_start: function() { setTimeout(function() {setDisplay("jspsych-btn","")}, 3000)},
+          	is_html: true,
+          	timeline: 
+		[
+                {stimulus: '<img src="./img/intro1.jpg" width=800px>'},
+		{stimulus: '<img src="./img/robot2.jpg" width=800px>'},
+                {stimulus: '<img src="./img/robot3.jpg" width=800px>'},
+                {stimulus: '<img src="./img/robot6.jpg" width=800px>'},
+                {stimulus: '<img src="./img/robot7.jpg" width=800px>'},
+                {stimulus: '<img src="./img/robot8_' + condition + '.jpg" width=800px>'},
+                {stimulus: '<img src="./img/robot9_' + condition + '.jpg" width=800px>'},
+                {stimulus: '<img src="./img/robot10_' + condition + '.jpg" width=800px>'}
+          	]
       };
       introloop.push(setup_block);
 
