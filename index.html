@@ -1,17 +1,20 @@
 <!doctype html>
 <html>
   <head>
+    <!-- This gives the browser window its title -->
     <title>Sprint Orienteering</title>
+    <!-- External java script files -->
     <script src="./js/jquery.min.js"></script>
     <script src="./js/jspsych.js"></script>
     <script src="./js/plugins/jspsych-text.js"></script>
     <script src="./js/plugins/jspsych-single-stim.js"></script>
     <script src="./js/plugins/jspsych-survey-multi-choice.js"></script>
-	<script src="./js/plugins/jspsych-button-response.js"></script>
+    <script src="./js/plugins/jspsych-button-response.js"></script>
     <link href="./js/css/jspsych.css" rel="stylesheet" type="text/css"></link>
   </head>
 
- <body>
+
+  <body>
 
 
     <!-- ####################### Heading ####################### -->
@@ -41,7 +44,6 @@
             </div>
 	</div>
 
-
 	<!-- ####################### Consent ####################### -->
 	<div class="consent" style="display:none; width:1000px">
 		<!-- Text box for the splash page -->
@@ -61,7 +63,7 @@
 
 			<p><b>Inquiries</b><br>If you have any questions or concerns following your participation, Ian Davies (+61 4 0006 0971, email. daviesi@student.unimelb.edu.au) will be happy to address them.<p>
 
-			<p>Please keep a copy of this information sheet (you can download the pdf <a href="./Resources/info.pdf" target="_blank">here</a>).  At least note my email address!  There is some additional information on the experiment which may interest you if you are a nerd, psychologist, or just generally curious <a href="./Resources/tech.pdf" target="_blank">here</a>!</p>
+			<p>Please keep a copy of this information sheet (you can download the pdf <a href="./wtf/info.pdf" target="_blank">here</a>).  At least note my email address!  There is some additional information on the experiment which may interest you if you are a nerd, psychologist, or just generally curious <a href="./wtf/tech.pdf" target="_blank">here</a>!</p>
 
 			<br>
 			<p align="center"><b>PARTICIPANT CONSENT</b></p>
@@ -73,12 +75,10 @@
                 <input type="button" id="consentButton" class="consent jspsych-btn" value="I agree" onclick="consentButtonClick()" >
 			</p>
 
-
 			<p>To withdraw your consent just close the browser tab, your data will be deleted from our records.</p>
 		</div>
         <br><br>
 	</div>
-
 
 	<!-- ####################### Demographics ####################### -->
 
@@ -151,8 +151,9 @@
 
 		<!-- Experience -->
 	  	<label for="experience"><b>Experience level: &nbsp;</b></label>
-	  	<input type="radio" name="experience" value="never" /> I have never run a Sprint event&nbsp;
-	  	<input type="radio" name="experience" value="expn" /> Some experience &nbsp;<br />
+	  	<input type="radio" name="experience" value="never" /> I have never entered a Sprint event&nbsp;
+	  	<input type="radio" name="experience" value="some" /> I have orienteered a bit before &nbsp;<br />
+		<input type="radio" name="experience" value="often" /> I orienteer often&nbsp;<br />
 	  	<input type="radio" name="experience" value="elite" /> I run M20E, M21E, W20E, or W21E&nbsp;
 		<input type="radio" name="experience" value="past-elite" /> I used to run Elete<br /><br />
 
@@ -206,12 +207,12 @@
 
 
 	  /* initialise */
-      var timeline=[];
-      var introloop=[];
-	  var testorder = jsPsych.randomization.shuffle([2, 3, 4, 5, 6, 7, 8]); // omit test item 1 in this version!
-	  var condition = jsPsych.randomization.shuffle(["category","property"])[0];
-      var baserate = jsPsych.randomization.shuffle(["small","large"])[0];
-      var turkcode = (Math.floor(Math.random() * 899999) + 100000).toString(); // generate completion code
+	var timeline=[];
+	var introloop=[];
+	var testorder = jsPsych.randomization.shuffle([2, 3, 4, 5, 6, 7, 8]); // no test item 1
+	var condition = jsPsych.randomization.shuffle(["category","property"])[0];
+	var baserate = jsPsych.randomization.shuffle(["small","large"])[0];
+
 
 
 
@@ -304,7 +305,7 @@
             preload_images: images,
             on_finish: function() {
                 endExperiment( jsPsych.data.dataAsCSV(), function() {
-                                        document.write('<div id="endscreen" class="endscreen" style="width:1000px"><div class="endscreen" style="text-align:center; border:0px solid; padding:10px; font-size:120%; width:800px; float:right"><p><br><br><br>All done!<br><br>Your completion code is <span id="turkcode" style="font-weight:bold;font-size:130%">' + turkcode + '</span>. To receive payment for the HIT, return to the Amazon Mechanical Turk page and enter this code. Please contact us if something goes wrong and we\'ll fix it as quickly as possible.</p></div></div>')
+                                        document.write('<div id="endscreen" class="endscreen" style="width:1000px"><div class="endscreen" style="text-align:center; border:0px solid; padding:10px; font-size:120%; width:800px; float:right"><p><br><br><br>All done!<br><br>Please contact us if something goes wrong and we\'ll fix it as quickly as possible.</p></div></div>')
                     }
                 )
             }
@@ -315,11 +316,6 @@
             setDisplay('demographics', 'none');
             setDisplay('header','none')
             //setHeader('');
-
-            //data.other.gender = getRadioButton("gender");
-            //data.other.age = document.getElementById("age").value;
-            //data.other.language = document.getElementById("language").value;
-            //data.other.country = document.getElementById("country").value;
 
             // record the condition assignment in the jsPsych data
             jsPsych.data.addProperties({
@@ -338,8 +334,7 @@
             jsPsych.data.addProperties({
                 sampling: condition,
                 baserate: baserate,
-                turkcode: turkcode
-            });
+             });
 
             startExperiment();
         }
