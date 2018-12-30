@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Planet Sodor</title>
+    <title>Sprint Orienteering</title>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/jspsych.js"></script>
     <script src="./js/plugins/jspsych-text.js"></script>
@@ -326,7 +326,11 @@
                 gender: getRadioButton("gender"),
                 age: document.getElementById("age").value,
                 language: document.getElementById("language").value,
-                country: document.getElementById("country").value
+                country: document.getElementById("country").value,
+                experience: getRadioButton("experience").value,
+                handedness: getRadioButton("handedness").value,
+                mapholding: getRadioButton("mapholding").value,
+               	driveside: getRadioButton("driveside").value
             });
 
 
