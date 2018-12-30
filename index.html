@@ -13,9 +13,7 @@
     <link href="./js/css/jspsych.css" rel="stylesheet" type="text/css"></link>
   </head>
 
-
   <body>
-
 
     <!-- ####################### Heading ####################### -->
 	<a name="top"></a>
@@ -26,21 +24,19 @@
 	<div class="start" style="width: 1000px">
 		<!-- Text box for the splash page -->
 		<div class="start" style="text-align:left; border:0px solid; padding:10px;  width:800px; float:right; font-size:90%">
-<p><b><br>	"Reading Sprint Maps"</b> is a short psychological study investigating how people read sprint orienteering maps. It involves the following steps:</p>
+			<p><b><br>	"Reading Sprint Maps"</b> is a short psychological study investigating how people read sprint orienteering maps. It involves the following steps:</p>
 			<ol>
-	<li> We ask for your consent. <br></li>
-	<li> We ask for demographic information.<br></li>
-	<li> If you are new to orienteering we give you some information on reading maps<br></li>
-	<li> The study then explains how to do the task in detail. You will need to pass a short test to check that you understand how the study works.<br></li>
-	<li> Next comes the experiment itself.<br></li>
-	<li> At the end, we'll show you a summary of your results and give you the option to identify yourself so we can email you a summary</li>
+				<li> We ask for your consent. <br></li>
+				<li> We ask for demographic information.<br></li>
+				<li> If you are new to orienteering we give you some information on reading maps<br></li>
+				<li> The study then explains how to do the task in detail. You will need to pass a short test to check that you understand how the study works.<br></li>
+				<li> Next comes the experiment itself.<br></li>
+				<li> At the end, we'll show you a summary of your results and give you the option to identify yourself so we can email you a summary</li>
 			</ol>
 			<p>The total time taken should be about 10 minutes. Please <u>don't</u> use the "back" button on your browser or close the window until you reach the end.  Doing this is very likely to break the experiment which means that I will loose my data and you may not get a copy of your results.  If something does go wrong, please contact me, and I will do what I can to fix it!  When you're ready to begin, click on the "start" button below.</p>
-
-		<!-- Next button for the splash page -->
-               <p align="center"> <input type="button" id="splashButton" class="start jspsych-btn" value="Start!"
-                       onclick="splashButtonClick()"> </p>
-
+			<!-- Next button for the splash page -->
+    		<p align="center"> <input type="button" id="splashButton" class="start jspsych-btn" value="Start!"
+   			 onclick="splashButtonClick()"> </p>
             </div>
 	</div>
 
@@ -50,31 +46,17 @@
 		<div class="consent" style="text-align:left; border:0px solid; padding:10px;  width:800px; font-size:90%; float:right">
 
 			<p align="center"><b>PARTICIPANT INFORMATION STATEMENT</b><br>
-			Understanding How Sprint Orienteers Make Decisions
-			</p>
-
+			Understanding How Sprint Orienteers Make Decisions</p>
 			<p><b>Purpose of study</b><br>We hope to learn the processes behind route decision making in a sprint orienteering environment.  This information will be used to develop training to enhance sprint orienteering performance.</p>
-
 			<p><b>Participant selection</b><br>Participants in this study are drawn from the orienteering community.  Participation in this study may be recommended as part of a training program to assist with learning the skill of map reading.</p>
-
 			<p><b>Confidentiality and Disclosure of Information</b><br>This software does not require you to identify yourself unless you choose to do so.  For participants who do identify themselves, information on their test results and that of average participants will be made available to them on request.  All information gathered by this study will be stored securely, information identifying individual participants will be destroyed after 2 years.  If you give us your permission by clicking on the &quot;I agree&quot; button below, we may publish the results in academic journals or discuss them at scientific conferences. In any publication, information will be provided in such a way that individuals cannot be identified.</p>
-
 			<p><b>Description of study and risks</b><br>No discomforts or inconveniences besides either boredom or a desire to cast aside electronic devices and go running are expected. No risks are anticipated as a result of your participation in this study.</p>
-
 			<p><b>Inquiries</b><br>If you have any questions or concerns following your participation, Ian Davies (+61 4 0006 0971, email. daviesi@student.unimelb.edu.au) will be happy to address them.<p>
-
-			<p>Please keep a copy of this information sheet (you can download the pdf <a href="./doc/info.pdf" target="_blank">here</a>).  At least note my email address!  There is some additional information on the experiment which may interest you if you are a nerd, psychologist, or just generally curious <a href="./doc/tech.pdf" target="_blank">here</a>!</p>
-
-			<br>
+			<p>Please keep a copy of this information sheet (you can download the pdf <a href="./doc/info.pdf" target="_blank">here</a>).  At least note my email address!  There is some additional information on the experiment which may interest you if you are a nerd, psychologist, or just generally curious <a href="./doc/tech.pdf" target="_blank">here</a>!</p><br>
 			<p align="center"><b>PARTICIPANT CONSENT</b></p>
-
-			By continuing, you are making a decision whether or not to participate.  Clicking the button below indicates that, having read the information provided on the participant information sheet, you have decided to participate.
-
-			<br>
+			By continuing, you are making a decision whether or not to participate.  Clicking the button below indicates that, having read the information provided on the participant information sheet, you have decided to participate.<br>
 			<p align="center">
-                <input type="button" id="consentButton" class="consent jspsych-btn" value="I agree" onclick="consentButtonClick()" >
-			</p>
-
+            <input type="button" id="consentButton" class="consent jspsych-btn" value="I agree" onclick="consentButtonClick()" ></p>
 			<p>To withdraw your consent just close the browser tab, your data will be deleted from our records.</p>
 		</div>
         <br><br>
@@ -85,8 +67,8 @@
 	<div class="demographics" style="display:none; align:center; width: 1000px">
 		<div class="demographics" style="text-align:left; border:0px solid; padding:10px;  width:800px; font-size:90%; float:right">
 		<!-- Explanatory text -->
-            	<p font-size:110%><b>Demographic information:</b></p><p>
-                We need this information to assist with our analysis, so please be honest with your answers.  It cannot be used to identify you, we give you the option of giving us that information later.      </p><br>
+        <p font-size:110%><b>Demographic information:</b></p><p>
+        We need this information to assist with our analysis, so please be honest with your answers.  This information cannot be used to identify you.</p><br>
 
 		<!-- Gender -->
 	 	<label for="gender"><b>Gender: &nbsp;</b></label>
@@ -98,56 +80,56 @@
 	  	<label for="age"><b>Age: &nbsp;</b></label>
 		<select name="age" id="age" class='drop-menu'>
 		<option>5 or younger</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-	    	<option>12</option>
-                <option>13</option>
-                <option>14</option>
-	    	<option>15</option>
-                <option>16</option>
-                <option>17</option>
-                <option>18</option>
-                <option>19</option>
-                <option selected="selected">20</option>
-                <option>21</option>
-	    	<option>22</option>
-                <option>23</option>
-                <option>24</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+	    <option>12</option>
+        <option>13</option>
+        <option>14</option>
+	    <option>15</option>
+        <option>16</option>
+        <option>17</option>
+    	<option>18</option>
+        <option>19</option>
+        <option selected="selected">20</option>
+        <option>21</option>
+		<option>22</option>
+        <option>23</option>
+        <option>24</option>
 		<option>25</option>
-                <option>26</option>
-                <option>27</option>
-                <option>28</option>
-                <option>29</option>
-                <option>30</option>
-                <option>30 to 35</option>
-	    	<option>35 to 40</option>
-                <option>40 to 45</option>
-                <option>45 to 50</option>
+        <option>26</option>
+        <option>27</option>
+        <option>28</option>
+        <option>29</option>
+        <option>30</option>
+        <option>30 to 35</option>
+		<option>35 to 40</option>
+        <option>40 to 45</option>
+        <option>45 to 50</option>
 		<option>50 to 55</option>
-	    	<option>55 to 60</option>
-                <option>60 to 65</option>
-                <option>65 to 70</option>
+	    <option>55 to 60</option>
+        <option>60 to 65</option>
+        <option>65 to 70</option>
 		<option>70 to 80</option>
-                <option>80 to 90</option>
-                <option>90+ (congratulations!)</option>
+        <option>80 to 90</option>
+        <option>90+ (congratulations!)</option>
 		</select><br /><br />
 
 		<!-- Language -->
 	  	<label for="language"><b>First Language: &nbsp;</b></label>
-            	<select id="language" name="language" class='drop-menu'>
-	    	<option>Danish</option>
-              	<option selected="selected">English</option>
-                <option>Finnish</option>
-                <option>French</option>
-                <option>Spanish</option>
-                <option>Swedish</option>
-                <option>Swiss</option>
-                <option>Other</option>
-                </select><br /><br />
+        <select id="language" name="language" class='drop-menu'>
+	    <option>Danish</option>
+        <option selected="selected">English</option>
+        <option>Finnish</option>
+        <option>French</option>
+        <option>Spanish</option>
+        <option>Swedish</option>
+        <option>Swiss</option>
+        <option>Other</option>
+        </select><br /><br />
 
 		<!-- Experience -->
 	  	<label for="experience"><b>Experience level: &nbsp;</b></label>
@@ -169,38 +151,29 @@
 	  	<input type="radio" name="mapholding" value="righthold" /> Right hand &nbsp;<br />
 	  	<br />
 
-		<!-- Driveside -->
-	  	<label for="driveside"><b>Do you usually drive on the left or right hand side of the road?: &nbsp;</b><br></label>
-	  	<input type="radio" name="driveside" value="left" /> Left hand side (right hand drive)&nbsp;
-	  	<input type="radio" name="driveside" value="right" /> Right hand side (left hand drive)&nbsp;<br />
-	  	<br />
-
 		<!-- Country -->
 		<label for="country"><b>Country you live in: &nbsp;</b></label>
 	  	<select name="country" id="country" class='drop-menu'>
-	    	<option>Antarctica</option>
-                <option selected="selected">Australia</option>
-                <option>Denmark</option>
-              	<option>Finland</option>
-                <option>France</option>
-                <option>New Zealand</option>
-                <option>Qatar</option>
-               	<option>Sweden</option>
-                <option>Switzerland</option>
-                <option>United Kingdom</option>
-                <option>United States of America</option>
-                </select><br><br>
+		<option>Antarctica</option>
+        <option selected="selected">Australia</option>
+        <option>Denmark</option>
+        <option>Finland</option>
+        <option>France</option>
+        <option>New Zealand</option>
+        <option>Qatar</option>
+        <option>Sweden</option>
+        <option>Switzerland</option>
+        <option>United Kingdom</option>
+        <option>United States of America</option>
+        </select><br><br>
 
 		<!-- Demographics  button -->
         <p align="center">
-                <input type="button" class="demographics jspsych-btn" id="demographicsButton" value="Next >"
-                       onclick="demographicsButtonClick()">
+        <input type="button" class="demographics jspsych-btn" id="demographicsButton" value="Next >"
+        onclick="demographicsButtonClick()">
        </p>
 	</div>
-
-
   </body>
-
   <script>
 
 
@@ -286,7 +259,7 @@
             	}
         }
 
-// ------------- handle the introductory stuff ----------------
+// ------------- handle the introductory HTML pages ----------------
 
         function splashButtonClick() 
 	{
@@ -302,13 +275,32 @@
         	setHeader(' ');
         }
 
-      	/* save and finish */
-      	function endExperiment(dataset,callback) 
+	function demographicsButtonClick() 
 	{
-		// $.post('submit',{"content": dataset});
-        	setTimeout(callback,1000)
-	}
+        	setDisplay('demographics', 'none');
+        	setDisplay('header','none')
+        	//setHeader('');
 
+        	// record the condition assignment in the jsPsych data
+        	jsPsych.data.addProperties(
+		{
+			gender: getRadioButton("gender"),
+            age: document.getElementById("age").value,
+            language: document.getElementById("language").value,
+            country: document.getElementById("country").value,
+            experience: getRadioButton("experience").value,
+            handedness: getRadioButton("handedness").value,
+            mapholding: getRadioButton("mapholding").value,
+        	});
+
+        	// record the condition assignment in the jsPsych data
+        	jsPsych.data.addProperties(
+		{
+			sampling: condition,
+                	baserate: baserate,
+            });
+            	startExperiment();
+    	}
 
      	/* start the experiment */
 	function startExperiment()
@@ -322,52 +314,21 @@
 			{
                 		endExperiment( jsPsych.data.dataAsCSV(), function() 
 				{
-                                	document.write('<div id="endscreen" class="endscreen" style="width:1000px"><div class="endscreen" style="text-align:center; border:0px solid; padding:10px; font-size:120%; width:800px; float:right"><p><br><br><br>All done!<br><br>Please contact us if something goes wrong and we\'ll fix it as quickly as possible.</p></div></div>')
+                                	document.write('<div id="endscreen" class="endscreen" style="width:1000px"><div class="endscreen" style="text-align:center; border:0px solid; padding:10px; font-size:120%; width:800px; float:right"><p><br><br><br>All done!<br><br>Please contact us if something goes wrong and we\'ll fix it as quickly as possible.</p><br><br>You may now close this window.</div></div>')
                     		})
             		}
           	});
      	}
 
-        function demographicsButtonClick() 
+      	/* save and finish */
+      	function endExperiment(dataset,callback) 
 	{
-        	setDisplay('demographics', 'none');
-        	setDisplay('header','none')
-        	//setHeader('');
-
-        	// record the condition assignment in the jsPsych data
-        	jsPsych.data.addProperties(
-		{
-			gender: getRadioButton("gender"),
-                	age: document.getElementById("age").value,
-                	language: document.getElementById("language").value,
-                	country: document.getElementById("country").value,
-                	experience: getRadioButton("experience").value,
-                	handedness: getRadioButton("handedness").value,
-                	mapholding: getRadioButton("mapholding").value,
-               		driveside: getRadioButton("driveside").value
-        	});
-
-        	// record the condition assignment in the jsPsych data
-        	jsPsych.data.addProperties(
-		{
-			sampling: condition,
-                	baserate: baserate,
-             	});
-            	startExperiment();
-        }
+		// $.post('submit',{"content": dataset});
+        	setTimeout(callback,1000)
+		}
 
 
-// -------------------- main expt ----------------
-
-
-	/* function that generates test string */
-	function testString(ind) 
-	{
-		  var str;
-		  str = "<img src='./img/test" + ind + ".jpg' width=800px><p width=800px><span id='qqqqq' style='display:none'>In your opinion, how likely is it that a Sodor sphere of this size has a plaxium coating?</span></p>"
-	  	return(str)
-	  }
-
+// -------------------- main expt (includes the timeline)----------------
 
 	/* define setup block */
 	var setup_block = 
@@ -376,13 +337,13 @@
           	timing_post_trial: 0,
 	      	button_html: '<button class="jspsych-btn" style="display:none">%choice%</button>',
           	choices: ['Click here to continue'],
-          	on_trial_start: function() { setTimeout(function() {setDisplay("jspsych-btn","")}, 3000)},
+          	on_trial_start: function() { setTimeout(function() {setDisplay("jspsych-btn","")}, 1500)},
           	is_html: true,
           	timeline: 
 		[
                 {stimulus: '<img src="./img/intro1.jpg" width=800px>'},
-		{stimulus: '<img src="./img/robot2.jpg" width=800px>'},
-                {stimulus: '<img src="./img/robot3.jpg" width=800px>'},
+		{stimulus: '<img src="./img/intro2.jpg" width=800px>'},
+                {stimulus: '<img src="./img/intro3.jpg" width=800px>'},
                 {stimulus: '<img src="./img/robot6.jpg" width=800px>'},
                 {stimulus: '<img src="./img/robot7.jpg" width=800px>'},
                 {stimulus: '<img src="./img/robot8_' + condition + '.jpg" width=800px>'},
@@ -391,9 +352,6 @@
           	]
       };
       introloop.push(setup_block);
-
-
-
 
       /* define instruction check block */
       var instructioncorrect = false;
@@ -404,22 +362,26 @@
           q3a = [" Yes, it checks every sphere it encounters"," No, it only tests spheres with the plaxium coating"];
       }
 
-	  var instruction_check = {
+	  var instruction_check = 
+	  {
           type: "survey-multi-choice",
           preamble: ["<p align='center'><b>Check your knowledge before you begin!</b></p>"],
           questions: ["<b>Question 1</b>: What is your goal in this task?", "<b>Question 2</b>: Which is true about the size of Sodor spheres?","<b>Question 3</b>: Does the probe transmit data about any sphere it encounters?"],
           randomize_order: true,
           options: [[" To find out if the planet Sodor is made of cheese"," To find out which Sodor spheres have plaxium coatings"],jsPsych.randomization.shuffle(["Spheres on Sodor come in a variety of sizes", "Spheres on Sodor are always small", "Spheres on Sodor are always large"]),q3a],
-          on_finish: function(data) {
+          on_finish: function(data) 
+		  {
 
-              if(condition == "category") {
+              if(condition == "category") 
+			  {
                 if( data.responses == '{"Q0":" To find out which Sodor spheres have plaxium coatings","Q1":"Spheres on Sodor come in a variety of sizes","Q2":" No, it only tests the small spheres"}') {
                   action = false;
                   instructioncorrect = true;
                 }
               }
 
-              if(condition == "property") {
+              if(condition == "property") 
+			  {
                 if( data.responses == '{"Q0":" To find out which Sodor spheres have plaxium coatings","Q1":"Spheres on Sodor come in a variety of sizes","Q2":" No, it only tests spheres with the plaxium coating"}') {
                   action = false;
                   instructioncorrect = true;
@@ -432,7 +394,8 @@
       introloop.push(instruction_check)
 
       var showsplash = true;
-      var splash_screen = {
+      var splash_screen = 
+	  {
           type: 'button-response',
           timing_post_trial: 0,
 	      button_html: '<button class="jspsych-btn" style="display:none">%choice%</button>',
@@ -442,17 +405,21 @@
           stimulus: '<img src = "./img/instructionfail.jpg" width=800px>'
       }
 
-      var conditional_splash = {
+      var conditional_splash = 
+	  {
           timeline: [splash_screen],
-          conditional_function: function(data) {
+          conditional_function: function(data) 
+		  {
               return !instructioncorrect // skip if correct
           }
       }
       introloop.push(conditional_splash)
 
-      var loop_node = {
+      var loop_node = 
+	  {
           timeline: introloop,
-          loop_function: function(data) {
+          loop_function: function(data) 
+		  {
               //var action = true;
               return !instructioncorrect // stop looping if correct
 
@@ -463,7 +430,8 @@
 
 
       /* success trial */
-      var successtrial = {
+      var successtrial = 
+	  {
           type: 'button-response',
           timing_post_trial: 0,
 	      button_html: '<button class="jspsych-btn" style="display:none">%choice%</button>',
@@ -478,9 +446,11 @@
       timeline.push(successtrial);
 
       // function to change the display property of a set of objects
-      function setDisplay(theClass, theValue) {
+      function setDisplay(theClass, theValue) 
+	  {
 	       var i, classElements = document.getElementsByClassName(theClass);
-	       for (i = 0; i < classElements.length; i = i + 1) {
+	       for (i = 0; i < classElements.length; i = i + 1) 
+		   {
 		      classElements[i].style.display = theValue;
 	       }
       }
@@ -488,63 +458,68 @@
 
 	  /* define observation trial */
       var arrivalprompt;
-      if(condition == "property") {
+      if(condition == "property") 
+	  {
           arrivalprompt = "The probe has detected a sphere with plaxium: Click here to view";
-      } else {
+      } else 
+	  	{
           arrivalprompt = "The probe has found and tested a small sphere: Click here to view";
-      }
+      	}
       var waitprompt = "<p align='center' style='color:white'>...</p>";
 
-      var obs_block1 = {
+      var obs_block1 = 
+	  {
           type: 'button-response',
           timing_post_trial: 0,
 	      button_html: '<button class="jspsych-btn" style="display:none">%choice%</button>',
           on_trial_start: function() { setTimeout(function() {setDisplay("jspsych-btn","")}, (Math.random() * 3000) + 3000)},
           is_html: true,
           timeline: [
-              {choices: [arrivalprompt], stimulus: '<img src = "./img/data0_' + condition + '.jpg" width=800px>'},
-              {choices: [arrivalprompt], stimulus: '<img src = "./img/data1_' + condition + '.jpg" width=800px>'},
-              {choices: ['Click here to continue.'], stimulus: '<img src = "./img/data2_' + condition + '.jpg" width=800px>'},
-
-         ]
+              		{choices: [arrivalprompt], stimulus: '<img src = "./img/data0_' + condition + '.jpg" width=800px>'},
+              		{choices: [arrivalprompt], stimulus: '<img src = "./img/data1_' + condition + '.jpg" width=800px>'},
+              		{choices: ['Click here to continue.'], stimulus: '<img src = "./img/data2_' + condition + '.jpg" width=800px>'},
+         			]
       };
 
-      var obs_block2 = {
+      var obs_block2 = 
+	  {
           type: 'button-response',
           timing_post_trial: 0,
 	      button_html: '<button class="jspsych-btn" style="display:none">%choice%</button>',
           on_trial_start: function() { setTimeout(function() {setDisplay("jspsych-btn","")}, (Math.random() * 800) + 800)},
           is_html: true,
           timeline: [
-              {choices: [arrivalprompt], stimulus: '<img src = "./img/data2_' + condition + '.jpg" width=800px>'}, //this is skipped over
-              {choices: [arrivalprompt], stimulus: '<img src = "./img/data3_' + condition + '.jpg" width=800px>'},
-              {choices: [arrivalprompt], stimulus: '<img src = "./img/data4_' + condition + '.jpg" width=800px>'},
-              {choices: [arrivalprompt], stimulus: '<img src = "./img/data5_' + condition + '.jpg" width=800px>'},
-              {choices: ['Click here to continue.'], stimulus: '<img src = "./img/data6_' + condition + '.jpg" width=800px>'},
-         ]
+              		{choices: [arrivalprompt], stimulus: '<img src = "./img/data2_' + condition + '.jpg" width=800px>'}, //this is skipped over
+              		{choices: [arrivalprompt], stimulus: '<img src = "./img/data3_' + condition + '.jpg" width=800px>'},
+              		{choices: [arrivalprompt], stimulus: '<img src = "./img/data4_' + condition + '.jpg" width=800px>'},
+              		{choices: [arrivalprompt], stimulus: '<img src = "./img/data5_' + condition + '.jpg" width=800px>'},
+              		{choices: ['Click here to continue.'], stimulus: '<img src = "./img/data6_' + condition + '.jpg" width=800px>'},
+         			]
       };
 
-      var obs_block3 = {
+      var obs_block3 = 
+	  {
           type: 'button-response',
           timing_post_trial: 0,
         button_html: '<button class="jspsych-btn" style="display:none">%choice%</button>',
           on_trial_start: function() { setTimeout(function() {setDisplay("jspsych-btn","")}, (Math.random() * 800) + 800)},
           is_html: true,
           timeline: [
-              {choices: [arrivalprompt], stimulus: '<img src = "./img/data6_' + condition + '.jpg" width=800px>'}, //this is skipped over
-              {choices: [arrivalprompt], stimulus: '<img src = "./img/data7_' + condition + '.jpg" width=800px>'},
-              {choices: [arrivalprompt], stimulus: '<img src = "./img/data8_' + condition + '.jpg" width=800px>'},
-              {choices: [arrivalprompt], stimulus: '<img src = "./img/data9_' + condition + '.jpg" width=800px>'},
-              {choices: [arrivalprompt], stimulus: '<img src = "./img/data10_' + condition + '.jpg" width=800px>'},
-              {choices: [arrivalprompt], stimulus: '<img src = "./img/data11_' + condition + '.jpg" width=800px>'},
-              {choices: ['Click here to continue.'], stimulus: '<img src = "./img/data12_' + condition + '.jpg" width=800px>'}
-         ]
+              		{choices: [arrivalprompt], stimulus: '<img src = "./img/data6_' + condition + '.jpg" width=800px>'}, //this is skipped over
+              		{choices: [arrivalprompt], stimulus: '<img src = "./img/data7_' + condition + '.jpg" width=800px>'},
+              		{choices: [arrivalprompt], stimulus: '<img src = "./img/data8_' + condition + '.jpg" width=800px>'},
+              		{choices: [arrivalprompt], stimulus: '<img src = "./img/data9_' + condition + '.jpg" width=800px>'},
+              		{choices: [arrivalprompt], stimulus: '<img src = "./img/data10_' + condition + '.jpg" width=800px>'},
+              		{choices: [arrivalprompt], stimulus: '<img src = "./img/data11_' + condition + '.jpg" width=800px>'},
+              		{choices: ['Click here to continue.'], stimulus: '<img src = "./img/data12_' + condition + '.jpg" width=800px>'}
+         			]
       };
 
 
 
 	  /* define interim block */
-      var interim_block = {
+      var interim_block = 
+	  {
           type: 'button-response',
           timing_post_trial: 0,
 		  button_html: '<button class="jspsych-btn" style="display:none">%choice%</button>',
@@ -552,8 +527,8 @@
           on_trial_start: function() { setTimeout(function() {setDisplay("jspsych-btn","")}, 2000)},
 		  is_html: true,
           timeline: [
-              {stimulus: '<img src = "./img/interim1_' + condition + '.jpg" width=800px>'}
-          ]
+              		{stimulus: '<img src = "./img/interim1_' + condition + '.jpg" width=800px>'}
+          			]
       };
 
 
@@ -596,6 +571,15 @@
     timeline.push(interim_block);
     timeline.push(test_block);
 
+// -------------------- nuts & bolts specific to this experiment ----------------
+
+	/* function that generates test string */
+	function testString(ind) 
+	{
+		  var str;
+		  str = "<img src='./img/test" + ind + ".jpg' width=800px><p width=800px><span id='qqqqq' style='display:none'>In your opinion, how likely is it that a Sodor sphere of this size has a plaxium coating?</span></p>"
+	  	return(str)
+	  }
 
 	  /* image list */
 	  var images = [
